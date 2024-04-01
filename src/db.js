@@ -1,9 +1,15 @@
-import { createPool } from "mysql2/promise";
-
-export const pool = createPool({
-  host: "localhost",
-  user: "root",
-  password: "",
-  port: 3306,
-  database: "azuretest",
+export const dbConfig = ({
+  HOST: "azurenodeapp.database.windows.net",
+  USER: "azureadmin",
+  PASSWORD: "azure@123#",
+  DB: "azurenodeappDB",
+  dialect: "mssql",
+  pool: {
+    max: 5,
+    min: 0,
+    acquire: 30000,
+    idle: 10000
+  }
 });
+
+

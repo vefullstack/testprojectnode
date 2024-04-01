@@ -1,11 +1,11 @@
 import { Router } from "express";
 import {
   getService, 
-  createService, 
+  createAndUpdateService, 
 } from "../controllers/serviceController.js";
 const router = Router();
 
 router.get("/", getService);
-router.post("/add", createService); 
+router.post("/add", createAndUpdateService); 
 
 export default router;
